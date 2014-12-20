@@ -1,0 +1,115 @@
+Classfile /home/shigemk2/junk/2014/12/jclass_abc/Test.class
+  Last modified 2014/12/20; size 724 bytes
+  MD5 checksum 8c8353723075b5cf6cd10b75545fd551
+  Compiled from "Test.java"
+class Test
+  SourceFile: "Test.java"
+  minor version: 0
+  major version: 51
+  flags: ACC_SUPER
+Constant pool:
+   #1 = Methodref          #12.#24        //  java/lang/Object."<init>":()V
+   #2 = Fieldref           #25.#26        //  java/lang/System.out:Ljava/io/PrintStream;
+   #3 = Class              #27            //  java/lang/StringBuilder
+   #4 = Methodref          #3.#24         //  java/lang/StringBuilder."<init>":()V
+   #5 = String             #28            //  
+   #6 = Methodref          #3.#29         //  java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   #7 = Methodref          #11.#30        //  Test.fib:(I)I
+   #8 = Methodref          #3.#31         //  java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+   #9 = Methodref          #3.#32         //  java/lang/StringBuilder.toString:()Ljava/lang/String;
+  #10 = Methodref          #33.#34        //  java/io/PrintStream.println:(Ljava/lang/String;)V
+  #11 = Class              #35            //  Test
+  #12 = Class              #36            //  java/lang/Object
+  #13 = Utf8               <init>
+  #14 = Utf8               ()V
+  #15 = Utf8               Code
+  #16 = Utf8               LineNumberTable
+  #17 = Utf8               main
+  #18 = Utf8               ([Ljava/lang/String;)V
+  #19 = Utf8               fib
+  #20 = Utf8               (I)I
+  #21 = Utf8               StackMapTable
+  #22 = Utf8               SourceFile
+  #23 = Utf8               Test.java
+  #24 = NameAndType        #13:#14        //  "<init>":()V
+  #25 = Class              #37            //  java/lang/System
+  #26 = NameAndType        #38:#39        //  out:Ljava/io/PrintStream;
+  #27 = Utf8               java/lang/StringBuilder
+  #28 = Utf8               
+  #29 = NameAndType        #40:#41        //  append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  #30 = NameAndType        #19:#20        //  fib:(I)I
+  #31 = NameAndType        #40:#42        //  append:(I)Ljava/lang/StringBuilder;
+  #32 = NameAndType        #43:#44        //  toString:()Ljava/lang/String;
+  #33 = Class              #45            //  java/io/PrintStream
+  #34 = NameAndType        #46:#47        //  println:(Ljava/lang/String;)V
+  #35 = Utf8               Test
+  #36 = Utf8               java/lang/Object
+  #37 = Utf8               java/lang/System
+  #38 = Utf8               out
+  #39 = Utf8               Ljava/io/PrintStream;
+  #40 = Utf8               append
+  #41 = Utf8               (Ljava/lang/String;)Ljava/lang/StringBuilder;
+  #42 = Utf8               (I)Ljava/lang/StringBuilder;
+  #43 = Utf8               toString
+  #44 = Utf8               ()Ljava/lang/String;
+  #45 = Utf8               java/io/PrintStream
+  #46 = Utf8               println
+  #47 = Utf8               (Ljava/lang/String;)V
+{
+  Test();
+    flags: 
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0       
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return        
+      LineNumberTable:
+        line 1: 0
+
+  public static void main(java.lang.String[]);
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=3, locals=1, args_size=1
+         0: getstatic     #2                  // Field java/lang/System.out:Ljava/io/PrintStream;
+         3: new           #3                  // class java/lang/StringBuilder
+         6: dup           
+         7: invokespecial #4                  // Method java/lang/StringBuilder."<init>":()V
+        10: ldc           #5                  // String 
+        12: invokevirtual #6                  // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+        15: bipush        10
+        17: invokestatic  #7                  // Method fib:(I)I
+        20: invokevirtual #8                  // Method java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+        23: invokevirtual #9                  // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+        26: invokevirtual #10                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+        29: return        
+      LineNumberTable:
+        line 3: 0
+        line 4: 29
+
+  private static int fib(int);
+    flags: ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=3, locals=1, args_size=1
+         0: iload_0       
+         1: iconst_1      
+         2: if_icmpgt     7
+         5: iload_0       
+         6: ireturn       
+         7: iload_0       
+         8: iconst_2      
+         9: isub          
+        10: invokestatic  #7                  // Method fib:(I)I
+        13: iload_0       
+        14: iconst_1      
+        15: isub          
+        16: invokestatic  #7                  // Method fib:(I)I
+        19: iadd          
+        20: ireturn       
+      LineNumberTable:
+        line 7: 0
+        line 8: 5
+        line 10: 7
+      StackMapTable: number_of_entries = 1
+           frame_type = 7 /* same */
+
+}
